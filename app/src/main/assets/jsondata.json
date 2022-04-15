@@ -1,0 +1,52 @@
+{
+  "navigator": [
+    {"name": "Food", "pic": "burger"},
+    {"name": "Drinks", "pic": "drink2"},
+    {"name": "Snack", "pic": "frites"},
+    {"name": "Dessert", "pic": "donut"}
+  ],
+
+  "Food": [
+    {"name": "Vegetarian Pizza", "price": "14", "ingredients": ["Onion", "Pepper", "Cheese", "Olives", "Mushroom"], "pic": "vegetarianpizza" },
+    {"name": "Pepperoni Pizza", "price": "11", "ingredients": ["Pepperoni", "Cheese","Tomato Sauce"], "pic": "pepperonipizza" },
+    {"name": "Chicken Burger", "price": "12", "ingredients": ["Chicken", "Cheese","Spicy sauce","Coleslaw","Fries"], "pic": "chickenburge" },
+    {"name": "Beef Burger", "price": "13", "ingredients": ["Meat", "Onions", "Fries","Ketchup","Mushrooms", "Coleslaw"], "pic": "beefburger" },
+    {"name": "Pesto Pasta", "price": "8", "ingredients": ["Fresh pesto", "Pasta","Parmesan cheese"], "pic": "pestopasta" },
+    {"name": "Spaghetti Bolognese", "price": "10", "ingredients": ["Tomatoes", "Basil","Garlic","Pasta","Onions","Beef"], "pic": "spaghettibolognese" }
+  ],
+
+  "Drinks": [
+    {"name": "Heineken Beer", "price": "4", "ingredients": ["Water", "Malted barley", "Hops"], "pic": "heineken" },
+    {"name": "Orange Juice", "price": "4", "ingredients": ["Fresh Orange", "Sugar"], "pic": "orangejuice" },
+    {"name": "Ice Tea", "price": "3", "ingredients": ["Mint", "Black tea", "Sugar"], "pic": "icetea" },
+    {"name": "Pineapple Juice", "price": "3", "ingredients": ["Pineapple", "Sugar"], "pic": "pineapplejuice" },
+    {"name": "Coffee", "price": "2", "ingredients": ["Black coffee", "Sugar", "Milk", "Water"], "pic": "coffee" },
+    {"name": "Tea", "price": "2", "ingredients": ["Rea tea", "Water", "Sugar"], "pic": "tea" }
+  ],
+
+  "Snack": [
+    {"name": "Pretzel", "price": "3.29", "ingredients": ["salt", "eggs", "sugar",
+      "butter", "flour", "yeast"], "pic": "pretzel" },
+    {"name": "Salted peanuts", "price": "1.2", "ingredients": ["peanuts", "salt"],
+      "pic": "salted_peanuts" },
+    {"name": "Potato chips", "price": "1.3", "ingredients": ["potatoes", "salt",
+      "vegetable oil"], "pic": "potato_chips" },
+    {"name": "Popcorn", "price": "1.03", "ingredients": ["corn", "popcorn oil", "sugar",
+      "salt"], "pic": "popcorn" },
+    {"name": "Trail mix", "price": "1.01", "ingredients": ["cashews", "banana chips",
+      "salt", "sugar", "chex cereals"], "pic": "trail_mix" },
+    {"name": "Indian Namkeen mixture", "price": "0.85", "ingredients": ["peanuts", "thenkuzhal",
+      "kara boondhi"], "pic": "indian_namkeen_mixture" }
+  ],
+
+  "Dessert": [
+    {"name": "Tiramisu", "price": "6", "ingredients": ["Sugar", "Cacao","Eggs","Mascarpone","Vanilla"], "pic": "tiramisu" },
+    {"name": "Eclair", "price": "5", "ingredients": ["Sugar", "Milk","Eggs","Water","Butter","Vanilla","Chocolate"], "pic": "eclair" },
+    {"name": "Donut", "price": "4", "ingredients": ["Sugar", "Milk","Eggs","Butter","Vanilla","Whipping cream","Puff pastry"], "pic": "doughnut" },
+    {"name": "Mille-feuille", "price": "9", "ingredients": ["Sugar", "Cacao","Eggs","Mascarpone","Vanilla"], "pic": "millefeuille" },
+    {"name": "Tarte au citron", "price": "9", "ingredients": ["Sugar", "Lemon","Eggs"], "pic": "tarteaucitron" },
+    {"name": "Fruit cocktail", "price": "7", "ingredients": ["Apple","Orange","Pineapple","Avocado","Strawberry"], "pic": "fruitcocktail" }
+  ]
+
+
+}

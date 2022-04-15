@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:weightSum="100">
+
+
+    <ImageView
+        android:id="@+id/imitemid"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:layout_weight="40"
+        tools:srcCompat="@drawable/kl" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="25"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title_item_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"
+            android:text="Title"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/price_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="18"
+            android:text="Price"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="20"
+        android:orientation="vertical">
+
+
+        <Button
+            android:id="@+id/button_details"
+            android:layout_width="188dp"
+            android:layout_height="60dp"
+            android:text="Details" />
+
+        <Button
+            android:id="@+id/button_add_cart"
+            android:layout_width="190dp"
+            android:layout_height="60dp"
+            android:text="Add to cart" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/empty_illustration"
+        android:layout_width="412dp"
+        android:layout_height="782dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/menuBar"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/illustartion" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/orderLayout"
+        android:layout_width="394dp"
+        android:layout_height="805dp"
+        android:layout_marginStart="888dp"
+        android:layout_marginLeft="888dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/cart_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="240dp"
+            android:layout_marginLeft="240dp"
+            android:layout_marginTop="104dp"
+            android:text="My Cart : 2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="219dp"
+            android:layout_height="199dp"
+            android:layout_marginBottom="412dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.371"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/millefeuille" />
+
+        <TextView
+            android:id="@+id/item_selected_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="348dp"
+            android:text="Name"
+            android:textColor="@color/purple_500"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.132"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/item_selected_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginLeft="44dp"
+            android:text="Ingredients"
+            android:textColor="@color/purple_500"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_selected_name"
+            app:layout_constraintVertical_bias="0.077" />
+
+        <TextView
+            android:id="@+id/price_item_selected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="428dp"
+            android:text="Price"
+            android:textColor="@color/purple_500"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/item_selected_name"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/add_cartt_second_button"
+            android:layout_width="177dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="30dp"
+            android:background="@color/purple_500"
+            android:text="Add to cart"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.552"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chipGroup"
+            app:layout_constraintVertical_bias="0.687" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup"
+            android:layout_width="310dp"
+            android:layout_height="99dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_selected_description"
+            app:layout_constraintVertical_bias="0.084">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_ingredient_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sugar" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_ingredient_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="cacao" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <Button
+            android:id="@+id/add_item_button"
+            android:layout_width="31dp"
+            android:layout_height="31dp"
+            android:layout_marginEnd="120dp"
+            android:layout_marginRight="120dp"
+            android:layout_marginBottom="128dp"
+            android:background="@drawable/custom_btn_add"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/remove_number_button"
+            android:layout_width="31dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="128dp"
+            android:layout_marginLeft="128dp"
+            android:layout_marginBottom="128dp"
+            android:background="@drawable/custom_btn_remove"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/id_number_order"
+            app:layout_constraintHorizontal_bias="0.25"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/id_number_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:text="1"
+            android:textColor="@color/purple_500"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toTopOf="@+id/add_cartt_second_button"
+            app:layout_constraintEnd_toStartOf="@+id/add_item_button"
+            app:layout_constraintHorizontal_bias="0.714"
+            app:layout_constraintStart_toEndOf="@+id/remove_number_button"
+            app:layout_constraintTop_toBottomOf="@+id/chipGroup"
+            app:layout_constraintVertical_bias="0.7" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/track_order_layout"
+        android:layout_width="394dp"
+        android:layout_height="805dp"
+        android:layout_marginStart="888dp"
+        android:layout_marginLeft="888dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <ListView
+            android:id="@+id/outside_list"
+            android:layout_width="344dp"
+            android:layout_height="474dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="164dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginRight="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/items_order_track" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="131dp"
+            android:layout_height="33dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="108dp"
+            android:text="Order tracking"
+            android:textColor="@color/purple_500"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/non_order"
+            android:layout_width="306dp"
+            android:layout_height="628dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="108dp"
+            android:gravity="center"
+            android:text="Please order something."
+            android:textColor="@color/purple_500"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/table_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="88dp"
+            android:layout_marginLeft="88dp"
+            android:layout_marginTop="108dp"
+            android:text="Table N° 2"
+            android:textColor="@color/purple_500"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ListView
+        android:id="@+id/leftBar"
+        android:layout_width="119dp"
+        android:layout_height="537dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:choiceMode="singleChoice"
+        android:listSelector="@color/purple_200"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.84"
+        tools:listitem="@layout/navigation_item">
+
+
+    </ListView>
+
+    <EditText
+        android:id="@+id/Searchbar"
+        android:layout_width="539dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/round_textfield"
+        android:drawableLeft="@drawable/ic_baseline_search_24"
+        android:ems="10"
+        android:hint=" Search a dish .."
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="261dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginLeft="144dp"
+        android:layout_marginTop="72dp"
+        android:drawableLeft="@drawable/round_textfield"
+        android:text="Food"
+        android:textColor="@color/purple_500"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Searchbar" />
+
+    <ListView
+        android:id="@+id/menuBar"
+        android:layout_width="699dp"
+        android:layout_height="437dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="436dp"
+        android:layout_marginRight="436dp"
+        android:layout_marginBottom="8dp"
+        android:choiceMode="singleChoice"
+        android:clipToPadding="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Title"
+        app:layout_constraintVertical_bias="0.02"
+        tools:listitem="@layout/menu_food_layout">
+
+    </ListView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cartLayout"
+        android:layout_width="394dp"
+        android:layout_height="805dp"
+        android:layout_marginStart="888dp"
+        android:layout_marginLeft="888dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginBottom="176dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ListView
+            android:id="@+id/insidelist"
+            android:layout_width="341dp"
+            android:layout_height="466dp"
+            android:layout_marginTop="144dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/card_item" />
+
+        <TextView
+            android:id="@+id/title2"
+            android:layout_width="106dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="132dp"
+            android:layout_marginLeft="132dp"
+            android:layout_marginTop="84dp"
+            android:text="Cart"
+            android:textColor="#040303"
+            android:textSize="34sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title3"
+            android:layout_width="129dp"
+            android:layout_height="57dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginBottom="92dp"
+            android:text="Total"
+            android:textColor="#040303"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/order_cart_price"
+            android:layout_width="173dp"
+            android:layout_height="64dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="88dp"
+            android:gravity="right"
+            android:text="222220€"
+            android:textColor="#040303"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="116dp"
+            android:layout_marginRight="116dp"
+            android:layout_marginBottom="16dp"
+            android:text="Confirm Order"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="3dp"
+        android:layout_height="650dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="1dp"
+        android:background="?android:attr/listDivider"
+        android:scrollbarSize="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/orderLayout"
+        app:layout_constraintHorizontal_bias="0.657"
+        app:layout_constraintStart_toEndOf="@+id/menuBar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/track_order_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="656dp"
+        android:layout_marginLeft="656dp"
+        android:layout_marginTop="44dp"
+        android:text="Track order"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
