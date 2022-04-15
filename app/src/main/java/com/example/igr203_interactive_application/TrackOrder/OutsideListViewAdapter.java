@@ -12,6 +12,8 @@ import androidx.annotation.Nullable;
 
 import com.example.igr203_interactive_application.R;
 
+import org.w3c.dom.Text;
+
 import java.util.List;
 
 public class OutsideListViewAdapter extends ArrayAdapter<OutsideOrder> {
@@ -43,6 +45,7 @@ public class OutsideListViewAdapter extends ArrayAdapter<OutsideOrder> {
             TextView id_remaining_time = (TextView) v.findViewById(R.id.id_remaining_time);
             TextView order_track_price = (TextView) v.findViewById(R.id.order_price);
             TextView number_items_order = v.findViewById(R.id.number_items_order);
+            TextView note_text = v.findViewById(R.id.note_text);
             if (order_track_number != null) {
                 order_track_number.setText(p.getOrder_id());
             }
@@ -57,6 +60,16 @@ public class OutsideListViewAdapter extends ArrayAdapter<OutsideOrder> {
 
             if(number_items_order!=null){
                 number_items_order.setText(p.getDetailStr());
+            }
+
+            if(note_text != null){
+                String notesStr = p.getNotesStr();
+                if(notesStr.isEmpty())
+                    note_text.setVisibility(View.GONE);
+                else {
+                    note_text.setVisibility(View.VISIBLE);
+                    note_text.setText(notesStr);
+                }
             }
         }
 

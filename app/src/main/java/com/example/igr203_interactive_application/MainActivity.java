@@ -15,6 +15,7 @@ import android.text.TextWatcher;
 import android.util.Log;
 import android.util.Pair;
 import android.view.KeyEvent;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
@@ -436,10 +437,7 @@ public class MainActivity extends AppCompatActivity {
                     showWrongOrderDialog();
                 }
                 else{
-                    // make a order
-                    showConfirmOrderDialog();
-                    enterNextOrder(); // enter to next order
-                    afterConfirmOrder();
+                    showAddNoteDialog();
                 }
             }
         });
@@ -480,9 +478,13 @@ public class MainActivity extends AppCompatActivity {
                 int remainTime = 2 * orderDetail.getTotalItemNum();
                 String remainTimeStr = "Remaining time: "+remainTime+" min";
                 String detailStr = "Details: "+orderDetail.getDetailStr();
+                String notesStr = orderDetail.getOrderNotes();
+                if(!notesStr.isEmpty()){
+                    notesStr = "Notes: "+notesStr;
+                }
                 try {
                     String totalPriceStr = "Total: "+orderDetail.getTotalPrice();
-                    OutsideOrder outsideorder=new OutsideOrder(order_id, remainTimeStr, totalPriceStr, detailStr);
+                    OutsideOrder outsideorder=new OutsideOrder(order_id, remainTimeStr, totalPriceStr, detailStr, notesStr);
                     outside_order_list.add(outsideorder);
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -503,6 +505,41 @@ public class MainActivity extends AppCompatActivity {
                 updatePageVisible();
             }
         });
+    }
+
+    private void showAddNoteDialog(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        // Get the layout inflater
+        LayoutInflater inflater = this.getLayoutInflater();
+
+        // Inflate and set the layout for the dialog
+        // Pass null as the parent view because its going in the dialog layout
+        builder.setView(inflater.inflate(R.layout.note_dialog, null))
+                // Add action buttons
+                .setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int id) {
+                        // mark down the notes
+                        Dialog noteDialog = (Dialog) dialog;
+                        EditText notesText = noteDialog.findViewById(R.id.notes_field);
+                        OrderDetail orderDetail = orderDetailList.get(currentOrderIndex);
+                        orderDetail.setOrderNotes(notesText.getText().toString());
+
+                        dialog.cancel();
+
+                        // make a order
+                        showConfirmOrderDialog();
+                        enterNextOrder(); // enter to next order
+                        afterConfirmOrder();
+                    }
+                })
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        //
+                    }
+                });
+        Dialog dialog = builder.create();
+        dialog.show();
     }
 
     @Override

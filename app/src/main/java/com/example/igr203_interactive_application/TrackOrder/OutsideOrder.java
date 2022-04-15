@@ -13,12 +13,14 @@ public class OutsideOrder {
     private String remaining_time;
     private String total_price;
     private String detailStr;
+    private String notesStr;
 
-    public OutsideOrder(String order_id, String remaining_time, String total_price, String detailStr) {
+    public OutsideOrder(String order_id, String remaining_time, String total_price, String detailStr, String notesStr) {
         this.order_id = order_id;
         this.remaining_time = remaining_time;
         this.total_price = total_price;
         this.detailStr = detailStr;
+        this.notesStr = notesStr;
     }
 
     public String getOrder_id() {
@@ -48,4 +50,6 @@ public class OutsideOrder {
     public String getDetailStr(){
         return this.detailStr;
     }
+
+    public String getNotesStr() {return this.notesStr;}
 }

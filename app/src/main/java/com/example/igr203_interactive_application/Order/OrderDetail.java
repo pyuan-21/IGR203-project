@@ -9,6 +9,8 @@ import java.util.ArrayList;
 public class OrderDetail {
     public ArrayList<OrderData> orderDataList;
 
+    private String orderNotes;
+
     public OrderDetail(){
         orderDataList = new ArrayList<>();
     }
@@ -110,5 +112,10 @@ public class OrderDetail {
         }
         total += ".";
         return total;
+    }
+
+    public String getOrderNotes(){return this.orderNotes;}
+    public void setOrderNotes(String orderNotes){
+        this.orderNotes = orderNotes;
     }
 }
